@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
 * {
   margin: 0;
   padding: 0;
@@ -14,17 +16,44 @@ a {
 }
 
 :root {
+  --background-1: #f7f7f7;
+  --background-2: white;
+  --text: black;
+  --menu-text: black;
   --cor-primaria: #e21;
   --cor-primaria-escura: #900;
+  --subtitle: rgba(0, 0, 0, 0.2);
 }
 
 body {
-  background: #f7f7f7;
+  background: var(--background-1);
+  color: var(--text);
   margin-top: 60px;
   font-family: Arial, Helvetica, sans-serif;
   display: grid;
   justify-items: center;
   gap: 60px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background-1: #111;
+    --background-2: #000000;
+    --text: white;
+    --subtitle: rgba(255, 255, 255, 0.2);
+    --menu-text: white;
+  }
+
+  .menu a:hover {
+    color: black;
+    background: white;
+  }
+}
+
+.bikcraft {
+  font-family: "Inter", sans-serif;
+  font-weight: 600;
+  font-size: 2.2rem;
 }
 
 img {
@@ -49,15 +78,15 @@ p {
 
 .menu a {
   font-weight: bold;
-  background: white;
+  background: var(--background-2);
   padding: 15px 30px;
   border-radius: 4px;
-  color: black;
+  color: var(--menu-text);
   text-transform: uppercase;
 }
 
 .menu a:hover {
-  background: rgba(0, 0, 0, .1);
+  background: rgba(0, 0, 0, 0.1);
 }
 
 .conteudo {
@@ -67,7 +96,7 @@ p {
 }
 
 .introducao {
-  background: #fff;
+  background: var(--background-2);
   padding: 40px;
   text-align: right;
   position: relative;
@@ -102,14 +131,14 @@ p {
 .subtitulo {
   font-size: 64px;
   text-transform: uppercase;
-  color: rgba(0, 0, 0, 0.2);
+  color: var(--subtitle);
   text-align: right;
   padding: 40px;
   align-self: center;
 }
 
 .vantagens {
-  background-color: white;
+  background-color: var(--background-2);
   padding: 40px;
 }
 
@@ -125,7 +154,7 @@ p {
 }
 
 footer {
-  background: white;
+  background: var(--background-2);
   width: 100%;
   text-align: center;
   padding: 20px;
