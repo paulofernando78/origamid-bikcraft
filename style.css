@@ -13,6 +13,11 @@ a {
   padding: 0;
 }
 
+:root {
+  --cor-primaria: #e21;
+  --cor-primaria-escura: #900;
+}
+
 body {
   background: #f7f7f7;
   margin-top: 60px;
@@ -51,6 +56,10 @@ p {
   text-transform: uppercase;
 }
 
+.menu a:hover {
+  background: rgba(0, 0, 0, .1);
+}
+
 .conteudo {
   max-width: 1000px;
   display: grid;
@@ -78,7 +87,7 @@ p {
 }
 
 .botao {
-  background: #e21;
+  background: var(--cor-primaria);
   padding: 15px 30px;
   /* font-weight: bold; */
   color: white;
@@ -86,34 +95,38 @@ p {
   text-transform: uppercase;
 }
 
+.botao:hover {
+  background: var(--cor-primaria-escura);
+}
+
 .subtitulo {
-    font-size: 64px;
-    text-transform: uppercase;
-    color: rgba(0, 0, 0, .2);
-    text-align: right;
-    padding: 40px;
-    align-self: center;
+  font-size: 64px;
+  text-transform: uppercase;
+  color: rgba(0, 0, 0, 0.2);
+  text-align: right;
+  padding: 40px;
+  align-self: center;
 }
 
 .vantagens {
-    background-color: white;
-    padding: 40px;
+  background-color: white;
+  padding: 40px;
 }
 
 .vantagens-item {
-    display: grid;
-    grid-template-columns: auto 1fr;
-    gap: 10px 20px;
-    padding: 20px 0;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 10px 20px;
+  padding: 20px 0;
 }
 
 .vantagens-item p {
-    grid-column: 2;
+  grid-column: 2;
 }
 
 footer {
-    background: white;
-    width: 100%;
-    text-align: center;
-    padding: 20px;
+  background: white;
+  width: 100%;
+  text-align: center;
+  padding: 20px;
 }
