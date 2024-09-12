@@ -35,21 +35,6 @@ body {
   gap: 60px;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background-1: #111;
-    --background-2: #000000;
-    --text: white;
-    --subtitle: rgba(255, 255, 255, 0.2);
-    --menu-text: white;
-  }
-
-  .menu a:hover {
-    color: black;
-    background: white;
-  }
-}
-
 .bikcraft {
   font-family: "Inter", sans-serif;
   font-weight: 600;
@@ -158,4 +143,19 @@ footer {
   width: 100%;
   text-align: center;
   padding: 20px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background-1: #111;
+    --background-2: #000000;
+    --text: white;
+    --subtitle: rgba(255, 255, 255, 0.2);
+    --menu-text: white;
+  }
+
+  .menu a:hover {
+    color: black;
+    background: white;
+  }
 }
